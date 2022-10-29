@@ -70,10 +70,9 @@ a {
     color: #ffffff;
 }
 
-.menu-link:hover {
+.menu-link:hover, .menu-link:focus {
     color: aqua;
-    font-size: 18px;
-    transition: color .2s, font-size 1s;
+    transition: color .2s;
 }
 
 .menu-list > li:nth-last-child(1) {
@@ -119,7 +118,7 @@ a {
 @media screen and (max-width: 960px) {
     .container {
         max-width: 960px;
-        min-width: 400px;
+        min-width: 370px;
         width: 100%;
         margin: 0 auto;
         padding: 10px;
@@ -145,6 +144,12 @@ a {
 @media screen and (max-width: 520px) {
     .main-header {
         font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main-header {
+        font-size: 20px;
     }
 }
 
@@ -235,4 +240,39 @@ a {
         }
     }
 }
+
+/*Технические классы для объема страницы, будет удалено*/
+
+.empty-section {
+    height: 200px;
+    position: relative;
+}
+
+.empty-section:before {
+    content: "SECTION";
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: black;
+}
+
+.empty-section:nth-child(odd) {
+    background-color: brown;
+}
+
+.empty-section:nth-child(even) {
+    background-color: darkorange;
+}
+
+.page-footer {
+    background-color: darkorange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 200px;
+}
+
+
 
